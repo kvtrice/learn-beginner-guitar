@@ -6,16 +6,43 @@
 			name="viewport"
 			content="width=device-width, initial-scale=1.0"
 		/>
-		<title>Learn Beginner Guitar</title>
+		<title>Beginner Strings</title>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playwrite+PL:wght@100..400&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
 		<link
 			rel="stylesheet"
 			href="./css/style.css"
 		/>
+		<script
+			src="./js/index.js"
+			defer
+		></script>
 	</head>
 	<body>
 		<!-- Header -->
 		<header class="header">
-			<div class="header__logo">Beginner Guitar</div>
+			<p class="header__logo">
+				<a
+					href="#"
+					class="header__logo__text"
+					>Beginner <span class="accent">strings</span></a
+				>
+			</p>
 			<nav class="header__nav">
 				<a
 					href="#"
@@ -23,14 +50,19 @@
 					>Home</a
 				>
 				<a
-					href="./pages/lessons.html"
-					class="header__link"
-					>Lessons</a
-				>
-				<a
 					href="./pages/chords.html"
 					class="header__link"
 					>Chords</a
+				>
+				<a
+					href="./pages/songs.html"
+					class="header__link"
+					>Songs</a
+				>
+				<a
+					href="./pages/tips.html"
+					class="header__link"
+					>Tips & Tricks</a
 				>
 				<a
 					href="./pages/contact.html"
@@ -41,19 +73,61 @@
 		</header>
 
 		<!-- Hero Section -->
-		<main class="homepage">
-			<section class="homepage__hero">
-				<h1 class="homepage__title">Guitar for Beginners</h1>
-				<p class="homepage__description">
-					Let's take your guitar playing to the next level!
+		<main>
+			<section class="hero">
+				<h1 class="hero__title">Your first chords await</h1>
+				<p class="hero__description">
+					Everything you need to start playing your favorite songs
+					today
 				</p>
+			</section>
+
+			<section class="explore">
+				<h2 class="explore__heading">Explore</h2>
+				<div class="explore__tiles"></div>
 			</section>
 		</main>
 
 		<!-- Footer -->
 		<footer class="footer">
-			<p class="footer__text">
-				&copy; 2024 Learn Beginner Guitar. All rights reserved.
+			<div class="footer__nav">
+				<p class="footer__nav__logo">
+					<a
+						href="#"
+						class="header__logo__text"
+						>Beginner <span class="accent">strings</span></a
+					>
+				</p>
+				<div class="footer__nav__nav-links">
+					<a
+						href="#"
+						class="footer__nav__link"
+						>Home</a
+					>
+					<a
+						href="./pages/chords.html"
+						class="footer__nav__link"
+						>Chords</a
+					>
+					<a
+						href="./pages/songs.html"
+						class="footer__nav__link"
+						>Songs</a
+					>
+					<a
+						href="./pages/tips.html"
+						class="footer__nav__link"
+						>Tips & Tricks</a
+					>
+					<a
+						href="./pages/contact.html"
+						class="footer__nav__link"
+						>Contact</a
+					>
+				</div>
+			</div>
+			<p class="footer__copyright">
+				&copy; 2024 Beginner Strings. All rights reserved.
 			</p>
 		</footer>
 	</body>
