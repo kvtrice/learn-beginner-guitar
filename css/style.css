@@ -1,13 +1,14 @@
 @import "../css/normalize.css";
 html {
   font-family: "Poppins", sans-serif;
-  background-color: #3c3b3d;
+  background-color: #030d0d;
   font-size: 18px;
   color: #fcfbf5;
 }
 
 a {
   text-decoration: none;
+  color: #fcfbf5;
 }
 a:hover {
   text-decoration: underline;
@@ -25,24 +26,36 @@ h2 {
   font-family: "Playwrite PL", cursive;
 }
 
+.section-heading {
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+  text-align: center;
+}
+
 .header {
-  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+}
+.header__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 1rem;
+  right: 1rem;
   z-index: 10;
   background-color: transparent;
   transition: 400ms;
 }
 .header__logo {
   font-size: 1.5rem;
-}
-.header__logo__text {
-  color: #fcfbf5;
+  color: #030d0d;
 }
 .header__logo__text:hover {
   text-decoration: none;
@@ -51,16 +64,24 @@ h2 {
   display: flex;
   gap: 1.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .header__nav {
+    display: none;
+  }
+}
 .header__link {
   font-size: 1rem;
-  color: #fcfbf5;
 }
 
 .scrolled {
-  background-color: #3c3b3d;
+  background-color: #A38A6B;
+  max-width: 1200px;
   box-shadow: 0px 6px 22px -2px rgba(0, 0, 0, 0.44);
   border-radius: 60px;
-  margin: 1rem;
+  margin: 1rem auto;
+}
+.scrolled--text {
+  color: #030d0d;
 }
 
 .hero {
@@ -87,21 +108,45 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0 auto;
+  background-color: #A38A6B;
+  margin: 0 auto;
+  color: #030d0d;
+}
+.footer__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer__logo {
+  font-size: 2rem;
+}
+@media screen and (max-width: 1024px) {
+  .footer__logo {
+    text-align: center;
+    align-self: center;
+  }
+}
+.footer__logo__text {
+  color: #030d0d;
+}
+.footer__logo__text:hover {
+  text-decoration: none;
 }
 .footer__nav {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  text-align: center;
 }
-.footer__nav__logo {
-  font-size: 2rem;
-}
-.footer__nav__logo__text:hover {
-  text-decoration: none;
+@media screen and (max-width: 1024px) {
+  .footer__nav {
+    flex-direction: column;
+  }
 }
 .footer__nav__link {
   font-size: 1rem;
-  color: #fcfbf5;
+  color: #030d0d;
 }
 .footer__nav__nav-links {
   text-align: right;
@@ -109,18 +154,104 @@ h2 {
   flex-direction: column;
   gap: 0.5rem;
 }
+@media screen and (max-width: 1024px) {
+  .footer__nav__nav-links {
+    text-align: center;
+    align-self: center;
+  }
+}
 .footer__copyright {
   margin: 2rem 0;
   font-size: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__copyright {
+    text-align: center;
+  }
 }
 
 .explore {
   text-align: center;
   padding: 2rem;
+  margin-bottom: 10rem;
+}
+.explore__tiles {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+}
+@media screen and (max-width: 1024px) {
+  .explore__tiles {
+    grid-template-columns: 1fr;
+  }
 }
 
-.page-section {
-  height: 50vh;
+.tile {
+  position: relative;
+  height: 30vh;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 400ms ease-in-out;
+  cursor: pointer;
+  box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.5);
+}
+.tile:hover .tile__image {
+  transition: 400ms ease-in-out;
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.tile__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: grayscale(90%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 400ms ease-in-out;
+  z-index: 0;
+}
+@media screen and (max-width: 1024px) {
+  .tile__image {
+    filter: grayscale(0%);
+  }
+}
+.tile__heading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1;
+}
+.tile__heading__content {
+  font-size: 2.5rem;
+  color: #fcfbf5;
+  background-color: rgba(0, 0, 0, 0.354);
+  padding: 0.1rem 0.5rem;
+  border-radius: 50px;
+  box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.354);
+}
+
+.chords {
+  background-image: url("../assets/chords.jpg");
+}
+
+.songs {
+  background-image: url("../assets/songs.jpg");
+}
+
+.tips {
+  background-image: url("../assets/tips.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */

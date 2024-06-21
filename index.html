@@ -36,40 +36,42 @@
 	<body>
 		<!-- Header -->
 		<header class="header">
-			<p class="header__logo">
-				<a
-					href="#"
-					class="header__logo__text"
-					>Beginner <span class="accent">strings</span></a
-				>
-			</p>
-			<nav class="header__nav">
-				<a
-					href="#"
-					class="header__link"
-					>Home</a
-				>
-				<a
-					href="./pages/chords.html"
-					class="header__link"
-					>Chords</a
-				>
-				<a
-					href="./pages/songs.html"
-					class="header__link"
-					>Songs</a
-				>
-				<a
-					href="./pages/tips.html"
-					class="header__link"
-					>Tips & Tricks</a
-				>
-				<a
-					href="./pages/contact.html"
-					class="header__link"
-					>Contact</a
-				>
-			</nav>
+			<div class="header__container">
+				<p class="header__logo">
+					<a
+						href="#"
+						class="header__logo__text"
+						>Beginner <span class="accent">strings</span></a
+					>
+				</p>
+				<nav class="header__nav">
+					<a
+						href="#"
+						class="header__link"
+						>Home</a
+					>
+					<a
+						href="./pages/chords.html"
+						class="header__link"
+						>Chords</a
+					>
+					<a
+						href="./pages/songs.html"
+						class="header__link"
+						>Songs</a
+					>
+					<a
+						href="./pages/tips.html"
+						class="header__link"
+						>Tips & Tricks</a
+					>
+					<a
+						href="./pages/contact.html"
+						class="header__link"
+						>Contact</a
+					>
+				</nav>
+			</div>
 		</header>
 
 		<!-- Hero Section -->
@@ -82,53 +84,143 @@
 				</p>
 			</section>
 
+			<!-- Explore Section -->
 			<section class="explore">
-				<h2 class="explore__heading">Explore</h2>
-				<div class="explore__tiles"></div>
+				<h2 class="explore section-heading">Explore</h2>
+				<div class="explore__tiles">
+					<a
+						href="./pages/chords.html"
+						class="tile"
+					>
+						<div class="tile__image chords"></div>
+						<div class="tile__heading">
+							<h3 class="tile__heading__content">
+								Learn Beginner Chords
+							</h3>
+						</div>
+					</a>
+					<a
+						href="./pages/songs.html"
+						class="tile"
+					>
+						<div class="tile__image songs"></div>
+						<div class="tile__heading">
+							<h3 class="tile__heading__content">
+								Learn Your First Song
+							</h3>
+						</div>
+					</a>
+					<a
+						href="./pages/tips.html"
+						class="tile"
+					>
+						<div class="tile__image tips"></div>
+						<div class="tile__heading">
+							<h3 class="tile__heading__content">
+								Learn Helpful Tips & Tricks
+							</h3>
+						</div>
+					</a>
+				</div>
+			</section>
+
+			<!-- Get in Touch -->
+			<section class="contact">
+				<h2 class="section-heading">Get in Touch</h2>
+				<form class="contact__form">
+					<label
+						for="firstName"
+						required
+						>First Name:
+					</label>
+					<input
+						type="text"
+						name="firstName"
+						id="firstName"
+					/>
+					<label for="lastName">Last Name: </label>
+					<input
+						type="text"
+						name="lastName"
+						id="lastName"
+					/>
+					<label for="email">Email: </label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						required
+					/>
+					<label for="reason">Contact Reason: </label>
+					<select
+						name="reason"
+						id="reason"
+					>
+						<option value="lessons">
+							I'm interested in lessons
+						</option>
+						<option value="song">
+							I want to request a song tutorial
+						</option>
+						<option value="feedback">
+							I have feedback on this website
+						</option>
+						<option value="other">Something else</option>
+					</select>
+					<label for="message">Messsage: </label>
+					<textarea
+						name="message"
+						id="message"
+						placeholder="Type your message here:"
+						required
+					></textarea>
+				</form>
 			</section>
 		</main>
 
 		<!-- Footer -->
 		<footer class="footer">
-			<div class="footer__nav">
-				<p class="footer__nav__logo">
-					<a
-						href="#"
-						class="header__logo__text"
-						>Beginner <span class="accent">strings</span></a
-					>
-				</p>
-				<div class="footer__nav__nav-links">
-					<a
-						href="#"
-						class="footer__nav__link"
-						>Home</a
-					>
-					<a
-						href="./pages/chords.html"
-						class="footer__nav__link"
-						>Chords</a
-					>
-					<a
-						href="./pages/songs.html"
-						class="footer__nav__link"
-						>Songs</a
-					>
-					<a
-						href="./pages/tips.html"
-						class="footer__nav__link"
-						>Tips & Tricks</a
-					>
-					<a
-						href="./pages/contact.html"
-						class="footer__nav__link"
-						>Contact</a
-					>
+			<div class="footer__container">
+				<div class="footer__nav">
+					<p class="footer__logo">
+						<a
+							href="#"
+							class="footer__logo__text"
+							>Beginner <span class="accent">strings</span></a
+						>
+					</p>
+					<div class="footer__nav__nav-links">
+						<a
+							href="#"
+							class="footer__nav__link"
+							>Home</a
+						>
+						<a
+							href="./pages/chords.html"
+							class="footer__nav__link"
+							>Chords</a
+						>
+						<a
+							href="./pages/songs.html"
+							class="footer__nav__link"
+							>Songs</a
+						>
+						<a
+							href="./pages/tips.html"
+							class="footer__nav__link"
+							>Tips & Tricks</a
+						>
+						<a
+							href="./pages/contact.html"
+							class="footer__nav__link"
+							>Contact</a
+						>
+					</div>
 				</div>
+				<p class="footer__copyright">
+					&copy; 2024 Beginner Strings. All rights reserved.
+				</p>
 			</div>
-			<p class="footer__copyright">
-				&copy; 2024 Beginner Strings. All rights reserved.
-			</p>
 		</footer>
 	</body>
 </html>

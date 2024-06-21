@@ -12,6 +12,7 @@ html {
 
 a {
 	text-decoration: none;
+	color: v.$primary-text;
 
 	&:hover {
 		text-decoration: underline;
@@ -30,25 +31,39 @@ h2 {
 	font-family: v.$accent-font;
 }
 
+.section-heading {
+	padding-top: 2rem;
+	padding-bottom: 5rem;
+	text-align: center;
+}
+
 .header {
-	padding: 2rem;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
-	background-color: transparent;
-	transition: 400ms;
+	max-width: v.$max-div-width;
+
+	&__container {
+		max-width: v.$max-div-width;
+		margin: 0 auto;
+		padding: 0.5rem 2rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: fixed;
+		top: 0;
+		left: 1rem;
+		right: 1rem;
+		z-index: 10;
+		background-color: transparent;
+		transition: 400ms;
+	}
 
 	&__logo {
 		font-size: 1.5rem;
+		color: v.$secondary-text;
 
 		&__text {
-			color: v.$primary-text;
-
 			&:hover {
 				text-decoration: none;
 			}
@@ -58,19 +73,27 @@ h2 {
 	&__nav {
 		display: flex;
 		gap: 1.5rem;
+
+		@include b.tablet-breakpoint {
+			display: none;
+		}
 	}
 
 	&__link {
 		font-size: 1rem;
-		color: v.$primary-text;
 	}
 }
 
 .scrolled {
-	background-color: v.$primary-bg;
+	background-color: v.$secondary-bg;
+	max-width: 1200px;
 	box-shadow: 0px 6px 22px -2px rgba(0, 0, 0, 0.44);
 	border-radius: 60px;
-	margin: 1rem;
+	margin: 1rem auto;
+
+	&--text {
+		color: v.$secondary-text;
+	}
 }
 
 .hero {
@@ -96,25 +119,46 @@ h2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin: 0 auto;
+	background-color: v.$secondary-bg;
+	margin: 0 auto;
+	color: v.$secondary-text;
+
+	&__container {
+		width: 100%;
+		max-width: v.$max-div-width;
+		margin: 0 auto;
+	}
+
+	&__logo {
+		font-size: 2rem;
+
+		@include b.tablet-breakpoint {
+			text-align: center;
+			align-self: center;
+		}
+
+		&__text {
+			color: v.$secondary-text;
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
 
 	&__nav {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		text-align: center;
 
-		&__logo {
-			font-size: 2rem;
-
-			&__text {
-				&:hover {
-					text-decoration: none;
-				}
-			}
+		@include b.tablet-breakpoint {
+			flex-direction: column;
 		}
 
 		&__link {
 			font-size: 1rem;
-			color: v.$primary-text;
+			color: v.$secondary-text;
 		}
 
 		&__nav-links {
@@ -122,20 +166,106 @@ h2 {
 			display: flex;
 			flex-direction: column;
 			gap: 0.5rem;
+
+			@include b.tablet-breakpoint {
+				text-align: center;
+				align-self: center;
+			}
 		}
 	}
 
 	&__copyright {
 		margin: 2rem 0;
 		font-size: 16px;
+
+		@include b.tablet-breakpoint {
+			text-align: center;
+		}
 	}
 }
 
 .explore {
 	text-align: center;
 	padding: 2rem;
+	margin-bottom: 10rem;
+
+	&__tiles {
+		max-width: v.$max-div-width;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1.5rem;
+
+		@include b.tablet-breakpoint {
+			grid-template-columns: 1fr;
+		}
+	}
 }
 
-.page-section {
-	height: 50vh;
+.tile {
+	position: relative;
+	height: 30vh;
+	border-radius: 20px;
+	overflow: hidden;
+	transition: 400ms ease-in-out;
+	cursor: pointer;
+	box-shadow: 4px 4px 8px 2px rgba(0, 0, 0, 0.5);
+
+	&:hover {
+		.tile__image {
+			transition: 400ms ease-in-out;
+			transform: scale(1.05);
+			filter: grayscale(0%);
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		filter: grayscale(90%);
+		background-repeat: no-repeat;
+		background-size: cover;
+		transition: 400ms ease-in-out;
+		z-index: 0;
+
+		@include b.tablet-breakpoint {
+			filter: grayscale(0%);
+		}
+	}
+
+	&__heading {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 100%;
+		@include m.flex-center;
+		padding: 1rem;
+		z-index: 1;
+
+		&__content {
+			font-size: 2.5rem;
+			color: v.$primary-text;
+			background-color: rgba(0, 0, 0, 0.354);
+			padding: 0.1rem 0.5rem;
+			border-radius: 50px;
+			box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.354);
+		}
+	}
+}
+
+.chords {
+	background-image: url("../assets/chords.jpg");
+}
+
+.songs {
+	background-image: url("../assets/songs.jpg");
+}
+
+.tips {
+	background-image: url("../assets/tips.jpg");
 }
