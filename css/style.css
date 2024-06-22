@@ -276,9 +276,41 @@ section {
   aspect-ratio: 16/9;
 }
 
+.songs-info {
+  max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.song__title {
+  margin: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.song__title--artist {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.song__chords {
+  margin: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.song__tabs, .song__lyrics {
+  margin: 1rem;
+  background: #1c221c;
+  padding: 1rem;
+  border-radius: 5px;
+  text-wrap: wrap;
+  overflow-x: hidden;
+  font-family: monospace;
+}
+
 html {
   font-family: "Poppins", sans-serif;
-  background-color: #030d0d;
+  background-color: #030d05;
   font-size: 18px;
   color: #fcfbf5;
 }

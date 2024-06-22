@@ -1,0 +1,40 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+
+.songs-info {
+	max-width: 700px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 0 auto;
+}
+
+.song {
+	&__title {
+		margin: 1rem;
+		font-size: 2rem;
+		margin-bottom: 1rem;
+
+        &--artist {
+            font-size: 1.5rem;
+            font-weight: 400;
+        }
+	}
+
+	&__chords {
+		margin: 1rem;
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+
+	&__tabs,
+	&__lyrics {
+		margin: 1rem;
+		background: v.$light-bg;
+		padding: 1rem;
+		border-radius: 5px;
+		text-wrap: wrap;
+		overflow-x: hidden;
+		font-family: monospace;
+	}
+}
