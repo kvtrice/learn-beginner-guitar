@@ -71,6 +71,45 @@
 						>Contact</a
 					>
 				</nav>
+				<button
+					class="header__hamburger"
+					aria-label="Open menu"
+				>
+					<img
+						src="./assets/hamburger-menu.png"
+						alt="Menu"
+						class="header__hamburger__menu"
+					/>
+				</button>
+			</div>
+			<div class="mobile-overlay">
+				<div class="header__mobile-nav">
+					<a
+						href="#"
+						class="header__mobile-link"
+						>Home</a
+					>
+					<a
+						href="./pages/chords.html"
+						class="header__mobile-link"
+						>Chords</a
+					>
+					<a
+						href="./pages/songs.html"
+						class="header__mobile-link"
+						>Songs</a
+					>
+					<a
+						href="./pages/tips.html"
+						class="header__mobile-link"
+						>Tips & Tricks</a
+					>
+					<a
+						href="#contact"
+						class="header__mobile-link"
+						>Contact</a
+					>
+				</div>
 			</div>
 		</header>
 
@@ -130,8 +169,16 @@
 				id="contact"
 			>
 				<div class="contact__container">
-					<h2 class="section-heading">Get in Touch</h2>
-					<form class="contact__form">
+					<h2
+						class="section-heading"
+						id="contactFormHeading"
+					>
+						Get in Touch
+					</h2>
+					<form
+						class="contact__form"
+						id="contactForm"
+					>
 						<div class="contact__form__main">
 							<div class="contact__form__section">
 								<label
@@ -212,6 +259,14 @@
 						</div>
 						<button class="contact__form__btn">Submit</button>
 					</form>
+					<p
+						id="thankYouMessage"
+						class="contact__thank-you-message"
+					>
+						Thank you for completing the contact form, we've
+						received your message and will get back to you shortly!
+						👏
+					</p>
 				</div>
 			</section>
 		</main>

@@ -1,3 +1,7 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+@use "./breakpoints" as b;
+
 .section-heading {
 	padding-top: 2rem;
 	text-align: center;
@@ -70,7 +74,6 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		transition: 400ms ease-in-out;
-		z-index: 0;
 
 		@include b.tablet-breakpoint {
 			filter: grayscale(0%);
@@ -86,7 +89,6 @@
 		height: 100%;
 		@include m.flex-center;
 		padding: 1rem;
-		z-index: 1;
 
 		&__content {
 			font-size: 2.5rem;
@@ -201,6 +203,32 @@
 			padding: 0.8rem 1rem;
 			border-radius: 50px;
 			border: none;
+			cursor: pointer;
+			background-color: v.$accent-text;
+			transition: 400ms;
+
+			&:hover {
+				transform: scale(1.1);
+			}
 		}
+	}
+
+	&__thank-you-message {
+		display: none;
+		color: v.$accent-text;
+		text-align: center;
+		font-size: 1.5rem;
+		line-height: 1.8rem;
+		font-weight: 500;
+		padding: 2rem 5rem;
+		margin-top: 1rem;
+
+		@include b.tablet-breakpoint {
+			font-size: 1rem;
+		}
+	}
+
+	.hidden {
+		display: none;
 	}
 }
