@@ -2,7 +2,7 @@
 @use "./variables" as v;
 
 .songs-info {
-	max-width: 700px;
+	max-width: v.$max-text-width;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -36,5 +36,9 @@
 		text-wrap: wrap;
 		overflow-x: hidden;
 		font-family: monospace;
+	}
+
+	&__lyrics {
+		margin-bottom: 2rem;
 	}
 }
