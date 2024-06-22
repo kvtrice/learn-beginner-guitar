@@ -37,21 +37,23 @@ contactForm.addEventListener("submit", event => {
 
 // Hamburger Menu Open & Close
 
-const hamburger = document.querySelector(".header__hamburger");
-const mobileOverlay = document.querySelector(".mobile-overlay");
-const mobileLinks = document.querySelectorAll(".header__mobile-link");
+document.addEventListener("DOMContentLoaded", () => {
+	const hamburger = document.querySelector(".header__hamburger");
+	const mobileOverlay = document.querySelector(".mobile-overlay");
+	const mobileLinks = document.querySelectorAll(".header__mobile-link");
 
-const toggleMobileMenu = () => {
-	mobileOverlay.classList.toggle("mobile-overlay--open");
-	hamburger.classList.toggle("header__hamburger--open");
-};
+	const toggleMobileMenu = () => {
+		mobileOverlay.classList.toggle("mobile-overlay--open");
+		hamburger.classList.toggle("header__hamburger--open");
+	};
 
-hamburger.addEventListener("click", () => {
-	toggleMobileMenu();
-});
-
-mobileLinks.forEach(link => {
-	link.addEventListener("click", () => {
+	hamburger.addEventListener("click", () => {
 		toggleMobileMenu();
+	});
+
+	mobileLinks.forEach(link => {
+		link.addEventListener("click", () => {
+			toggleMobileMenu();
+		});
 	});
 });
