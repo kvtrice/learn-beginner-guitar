@@ -93,14 +93,11 @@ h2 {
 }
 
 .scrolled {
-  background-color: #A38A6B;
+  background-color: #574343;
   max-width: 1200px;
   box-shadow: 0px 6px 22px -2px rgba(0, 0, 0, 0.44);
   border-radius: 60px;
   margin: 1rem auto;
-}
-.scrolled--text {
-  color: #030d0d;
 }
 
 .hero {
@@ -128,14 +125,13 @@ h2 {
 }
 
 .footer {
+  border-top: 1px solid white;
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  background-color: #A38A6B;
   margin: 0 auto;
-  color: #030d0d;
 }
 .footer__container {
   width: 100%;
@@ -157,9 +153,6 @@ h2 {
     align-self: center;
   }
 }
-.footer__logo__text {
-  color: #030d0d;
-}
 .footer__logo__text:hover {
   text-decoration: none;
 }
@@ -176,7 +169,6 @@ h2 {
 }
 .footer__nav__link {
   font-size: 1rem;
-  color: #030d0d;
 }
 .footer__nav__nav-links {
   text-align: right;
