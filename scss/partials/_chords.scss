@@ -1,0 +1,55 @@
+@use "./mixins" as m;
+@use "./variables" as v;
+@use "./breakpoints" as b;
+
+.chord-info {
+	@include m.flex-center;
+	max-width: v.$max-div-width;
+	margin: 0 auto;
+
+	&__text {
+		max-width: 900px;
+		padding: 1rem;
+	}
+
+	&__list {
+		max-width: v.$max-text-width;
+
+		&__item {
+			padding: 0.5rem;
+		}
+	}
+
+	&__diagram {
+		max-width: v.$max-text-width;
+		overflow: hidden;
+		padding-left: 4rem;
+		padding-right: 4rem;
+
+		@include b.tablet-breakpoint {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+
+		&__image {
+			border-radius: 50px;
+			width: 100%;
+		}
+	}
+
+	&__video {
+		@include m.flex-center;
+
+		&__container {
+			width: 100%;
+			max-width: 1000px;
+		}
+	}
+}
+
+#iframe {
+	border-radius: 50px;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 16 / 9;
+}
