@@ -20,7 +20,13 @@
 	padding: 0 1rem;
 
 	@include b.tablet-breakpoint {
-		height: 75vh;
+		height: 60vh;
+	}
+
+	&__title {
+		@include b.tablet-breakpoint {
+			padding-top: 10rem;
+		}
 	}
 
 	&__description {
