@@ -91,7 +91,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 400ms ease-in-out;
-  z-index: 0;
 }
 @media screen and (max-width: 1024px) {
   .tile__image {
@@ -110,7 +109,6 @@ section {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  z-index: 1;
 }
 .tile__heading__content {
   font-size: 2.5rem;
@@ -222,6 +220,30 @@ section {
   padding: 0.8rem 1rem;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
+  background-color: #e9b686;
+  transition: 400ms;
+}
+.contact__form__btn:hover {
+  transform: scale(1.1);
+}
+.contact__thank-you-message {
+  display: none;
+  color: #e9b686;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 500;
+  padding: 2rem 5rem;
+  margin-top: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .contact__thank-you-message {
+    font-size: 1rem;
+  }
+}
+.contact .hidden {
+  display: none;
 }
 
 .chord-info {
@@ -429,6 +451,57 @@ h2 {
 }
 .header__link {
   font-size: 1rem;
+}
+.header__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 100;
+}
+@media screen and (max-width: 1024px) {
+  .header__hamburger {
+    display: block;
+  }
+}
+.header__hamburger__menu {
+  width: 24px;
+  height: 24px;
+}
+.header .mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #7a887e;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 100 !important;
+}
+.header .mobile-overlay--open {
+  display: block;
+  visibility: visible;
+}
+.header .header__mobile-nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header .header__mobile-nav .header__mobile-link {
+  display: block;
+  text-wrap: nowrap;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.header .header__mobile-nav .header__mobile-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .scrolled {
