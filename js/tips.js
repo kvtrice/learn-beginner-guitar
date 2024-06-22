@@ -1,9 +1,13 @@
-const tips = document.querySelectorAll(".tip");
+document.addEventListener("DOMContentLoaded", () => {
+	const tips = document.querySelectorAll(".tip");
+	const firstTip = document.querySelector(".tip:first-child .tip__content");
 
-tips.forEach(tip => {
-	tip.querySelector(".tip__title").addEventListener("click", () => {
-		const content = tip.querySelector(".tip__content");
-		content.style.display =
-			content.style.display === "block" ? "none" : "block";
+	firstTip.classList.add("active");
+
+	tips.forEach(tip => {
+		tip.querySelector(".tip__title").addEventListener("click", () => {
+			const content = tip.querySelector(".tip__content");
+			content.classList.toggle("active");
+		});
 	});
 });

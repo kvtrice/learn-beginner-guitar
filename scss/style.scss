@@ -2,11 +2,6 @@
 @use "./partials/variables" as v;
 @use "./partials/breakpoints" as b;
 @import "../css/normalize.css";
-@import "../scss/partials/subpages";
-@import "../scss/partials/index";
-@import "../scss/partials/chords";
-@import "../scss/partials/songs";
-@import "../scss/partials/tips";
 
 html {
 	font-family: v.$primary-font;
@@ -235,3 +230,9 @@ h2 {
 		}
 	}
 }
+
+@import "../scss/partials/subpages";
+@import "../scss/partials/index";
+@import "../scss/partials/chords";
+@import "../scss/partials/songs";
+@import "../scss/partials/tips";
