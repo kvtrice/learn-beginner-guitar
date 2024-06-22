@@ -13,7 +13,7 @@ section {
   height: 8rem;
 }
 .page-header__content {
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-left: 1rem;
   padding-right: 1rem;
   text-align: center;
@@ -342,7 +342,13 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+@media screen and (max-width: 1024px) {
+  .tips-info {
+    text-align: center;
+  }
 }
 
 .tip {
@@ -351,6 +357,7 @@ section {
   overflow: hidden;
   width: 100%;
   border: 1px solid #7a887e;
+  margin: 1rem;
 }
 .tip__title {
   font-size: 1.5rem;
