@@ -86,7 +86,7 @@
 
 			<!-- Explore Section -->
 			<section class="explore">
-				<h2 class="explore section-heading">Explore</h2>
+				<h2 class="section-heading">Explore</h2>
 				<div class="explore__tiles">
 					<a
 						href="./pages/chords.html"
@@ -126,55 +126,90 @@
 
 			<!-- Get in Touch -->
 			<section class="contact">
-				<h2 class="section-heading">Get in Touch</h2>
-				<form class="contact__form">
-					<label
-						for="firstName"
-						required
-						>First Name:
-					</label>
-					<input
-						type="text"
-						name="firstName"
-						id="firstName"
-					/>
-					<label for="lastName">Last Name: </label>
-					<input
-						type="text"
-						name="lastName"
-						id="lastName"
-					/>
-					<label for="email">Email: </label>
-					<input
-						type="email"
-						name="email"
-						id="email"
-						required
-					/>
-					<label for="reason">Contact Reason: </label>
-					<select
-						name="reason"
-						id="reason"
-					>
-						<option value="lessons">
-							I'm interested in lessons
-						</option>
-						<option value="song">
-							I want to request a song tutorial
-						</option>
-						<option value="feedback">
-							I have feedback on this website
-						</option>
-						<option value="other">Something else</option>
-					</select>
-					<label for="message">Messsage: </label>
-					<textarea
-						name="message"
-						id="message"
-						placeholder="Type your message here:"
-						required
-					></textarea>
-				</form>
+				<div class="contact__container">
+					<h2 class="section-heading">Get in Touch</h2>
+					<form class="contact__form">
+						<div class="contact__form__main">
+							<div class="contact__form__section">
+								<label
+									for="firstName"
+									required
+									class="contact__form__label"
+									>First Name:
+								</label>
+								<input
+									type="text"
+									name="firstName"
+									id="firstName"
+									class="contact__form__input"
+								/>
+							</div>
+							<div class="contact__form__section">
+								<label
+									for="lastName"
+									class="contact__form__label"
+									>Last Name:
+								</label>
+								<input
+									type="text"
+									name="lastName"
+									id="lastName"
+									class="contact__form__input"
+								/>
+							</div>
+							<div class="contact__form__section">
+								<label
+									for="email"
+									class="contact__form__label"
+									>Email:
+								</label>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									required
+									class="contact__form__input"
+								/>
+							</div>
+							<div class="contact__form__section">
+								<label
+									for="reason"
+									class="contact__form__label"
+									>Contact Reason:
+								</label>
+								<select
+									name="reason"
+									id="reason"
+									class="contact__form__input"
+								>
+									<option value="lessons">
+										I'm interested in lessons
+									</option>
+									<option value="song">
+										I want to request a song tutorial
+									</option>
+									<option value="feedback">
+										I have feedback on this website
+									</option>
+									<option value="other">
+										Something else
+									</option>
+								</select>
+							</div>
+							<div class="contact__form__section--full">
+								<textarea
+									name="message"
+									id="message"
+									placeholder="Type your message here"
+									required
+									rows="5"
+									class="contact__form__input--full"
+								></textarea>
+							</div>
+						</div>
+						<button class="contact__form__btn">Submit</button>
+					</form>
+				</div>
 			</section>
 		</main>
 
