@@ -178,17 +178,6 @@
 			}
 		}
 
-		&__label {
-			text-wrap: nowrap;
-			padding-right: 1rem;
-			text-align: left;
-
-			@include b.tablet-breakpoint {
-				padding-right: 0;
-				padding-bottom: 0.5rem;
-			}
-		}
-
 		&__input {
 			width: 100%;
 			border-radius: 50px;
@@ -200,6 +189,16 @@
 				border-radius: 20px;
 				padding: 0.7rem;
 				border: none;
+			}
+		}
+
+		&__select {
+			width: 100%;
+			border-radius: 50px;
+			padding: 0.5rem;
+
+			&__option {
+				padding: 0.7rem;
 			}
 		}
 
@@ -231,6 +230,7 @@
 
 		@include b.tablet-breakpoint {
 			font-size: 1rem;
+			padding: 1rem;
 		}
 	}
 
