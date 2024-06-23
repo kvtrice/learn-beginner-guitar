@@ -165,13 +165,12 @@ h2 {
 }
 
 .footer {
-	border-top: 1px solid white;
 	padding: 2rem 3rem;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	margin: 0 auto;
-	margin: 0 auto;
+	background: linear-gradient(to bottom, v.$primary-bg, v.$light-bg);
 
 	&__container {
 		width: 100%;
@@ -228,6 +227,7 @@ h2 {
 
 	&__copyright {
 		margin: 2rem 0;
+		padding-top: 2rem;
 		font-size: 16px;
 
 		@include b.tablet-breakpoint {
