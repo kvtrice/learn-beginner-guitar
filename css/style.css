@@ -328,7 +328,7 @@ section {
 }
 .song__tabs, .song__lyrics {
   margin: 1rem;
-  background: #1c221c;
+  background: rgba(122, 136, 126, 0.4941176471);
   padding: 1rem;
   border-radius: 5px;
   text-wrap: wrap;
@@ -526,13 +526,12 @@ h2 {
 }
 
 .footer {
-  border-top: 1px solid white;
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin: 0 auto;
-  margin: 0 auto;
+  background: linear-gradient(to bottom, #030d05, rgba(122, 136, 126, 0.4941176471));
 }
 .footer__container {
   width: 100%;
@@ -585,6 +584,7 @@ h2 {
 }
 .footer__copyright {
   margin: 2rem 0;
+  padding-top: 2rem;
   font-size: 16px;
 }
 @media screen and (max-width: 1024px) {
