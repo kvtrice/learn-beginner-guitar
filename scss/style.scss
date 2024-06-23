@@ -124,8 +124,8 @@ h2 {
 		bottom: 0;
 		background-color: v.$secondary-bg;
 		visibility: hidden;
-		transition: opacity 0.3s ease, visibility 0.3s ease;
 		z-index: 100 !important;
+		display: flex;
 
 		&--open {
 			display: block;
@@ -133,24 +133,25 @@ h2 {
 		}
 	}
 
-	.header__mobile-nav {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+	&__mobile-nav {
+		margin: 6rem auto;
+		width: 60%;
 		text-align: center;
 
 		.header__mobile-link {
-			display: block;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 			text-wrap: nowrap;
-			padding: 1.5rem;
+			padding: 1rem;
 			font-size: 1.5rem;
-			color: white;
+			color: v.$primary-text;
 			text-decoration: none;
-			transition: background-color 0.3s ease;
+			transition: 400ms ease;
+			border-radius: 50px;
 
 			&:hover {
-				background-color: rgba(255, 255, 255, 0.2);
+				background-color: #ffffff33;
 			}
 		}
 	}
