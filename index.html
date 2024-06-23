@@ -182,67 +182,61 @@
 					>
 						<div class="contact__form__main">
 							<div class="contact__form__section">
-								<label
-									for="firstName"
-									required
-									class="contact__form__label"
-									>First Name:
-								</label>
 								<input
 									type="text"
 									name="firstName"
 									id="firstName"
+									placeholder="First name*"
 									class="contact__form__input"
 								/>
 							</div>
 							<div class="contact__form__section">
-								<label
-									for="lastName"
-									class="contact__form__label"
-									>Last Name:
-								</label>
 								<input
 									type="text"
 									name="lastName"
 									id="lastName"
+									placeholder="Last name"
 									class="contact__form__input"
 								/>
 							</div>
 							<div class="contact__form__section">
-								<label
-									for="email"
-									class="contact__form__label"
-									>Email:
-								</label>
 								<input
 									type="email"
 									name="email"
 									id="email"
+									placeholder="Email address*"
 									required
 									class="contact__form__input"
 								/>
 							</div>
-							<div class="contact__form__section">
-								<label
-									for="reason"
-									class="contact__form__label"
-									>Contact Reason:
-								</label>
+							<div class="contact__form__section--select">
 								<select
 									name="reason"
 									id="reason"
-									class="contact__form__input"
+									class="contact__form__select"
 								>
-									<option value="lessons">
+									<option
+										value="lessons"
+										class="contact__form__select__option"
+									>
 										I'm interested in lessons
 									</option>
-									<option value="song">
+									<option
+										value="song"
+										class="contact__form__select__option"
+									>
 										I want to request a song tutorial
 									</option>
-									<option value="feedback">
+									<option
+										value="feedback"
+										class="contact__form__select__option"
+									>
 										I have feedback on this website
 									</option>
-									<option value="other">
+									<option
+										value="other"
+										class="contact__form__select__option"
+									>
 										Something else
 									</option>
 								</select>
