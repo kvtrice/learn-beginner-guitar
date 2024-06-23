@@ -23,23 +23,21 @@ window.addEventListener("scroll", () => {
 
 // Hamburger Menu Open & Close
 
-document.addEventListener("DOMContentLoaded", () => {
-	const hamburger = document.querySelector(".header__hamburger");
-	const mobileOverlay = document.querySelector(".mobile-overlay");
-	const mobileLinks = document.querySelectorAll(".header__mobile-link");
+const hamburger = document.querySelector(".header__hamburger");
+const mobileOverlay = document.querySelector(".mobile-overlay");
+const mobileLinks = document.querySelectorAll(".header__mobile-link");
 
-	const toggleMobileMenu = () => {
-		mobileOverlay.classList.toggle("mobile-overlay--open");
-		hamburger.classList.toggle("header__hamburger--open");
-	};
+const toggleMobileMenu = () => {
+	mobileOverlay.classList.toggle("mobile-overlay--open");
+	hamburger.classList.toggle("header__hamburger--open");
+};
 
-	hamburger.addEventListener("click", () => {
+hamburger.addEventListener("click", () => {
+	toggleMobileMenu();
+});
+
+mobileLinks.forEach(link => {
+	link.addEventListener("click", () => {
 		toggleMobileMenu();
-	});
-
-	mobileLinks.forEach(link => {
-		link.addEventListener("click", () => {
-			toggleMobileMenu();
-		});
 	});
 });
